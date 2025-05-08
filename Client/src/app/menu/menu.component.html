@@ -1,0 +1,32 @@
+<button mat-button [matMenuTriggerFor]="editgraph">Edit graph</button>
+<mat-menu #editgraph="matMenu">
+  <button mat-menu-item (click)="openAddNodeDialog()">Add Node</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="layout">Layout</button>
+<mat-menu #layout="matMenu">
+  <button mat-menu-item (click)="onLayoutClick('Organic')">Organic</button>
+  <button mat-menu-item (click)="onLayoutClick('Hierarchical')">Hierarchical</button>
+  <button mat-menu-item (click)="onLayoutClick('Tree')">Tree</button>
+</mat-menu>
+<button mat-button [matMenuTriggerFor]="graphMenu">
+  {{ selectedGraph }}
+</button>
+
+<mat-menu #graphMenu="matMenu">
+  <button
+    mat-menu-item
+    *ngFor="let graph of availableGraphs"
+    (click)="onGraphSelection(graph)"
+  >
+    {{ graph.name }}
+  </button>
+</mat-menu>
+
+<button mat-button (click) = "openCreateGraphDialogue()">Create Graph</button>
+
+
+
+
+
+

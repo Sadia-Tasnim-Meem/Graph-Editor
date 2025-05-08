@@ -1,0 +1,15 @@
+<!-- <p>create-graph-dialogue works!</p> -->
+
+
+<form [formGroup]="form" style="padding: 20px;">
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Enter Graph Name</mat-label>
+      <input matInput formControlName="name" />
+    </mat-form-field>
+
+    <div style="text-align: right; margin-top: 20px;">
+        <button mat-button (click)="onCancel()">Cancel</button>
+        <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+      </div>  
+</form>
+  

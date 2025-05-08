@@ -1,0 +1,26 @@
+
+<form [formGroup]="form" style="padding: 20px;">
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Entity Name</mat-label>
+    <input matInput formControlName="name" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Select Parents</mat-label>
+    <mat-select formControlName="parents" multiple>
+      <mat-option *ngFor="let node of nodes" [value]="node">{{ node }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Select Children</mat-label>
+    <mat-select formControlName="children" multiple>
+      <mat-option *ngFor="let node of nodes" [value]="node">{{ node }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <div style="text-align: right; margin-top: 20px;">
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-raised-button color="primary" (click)="onSave()">Save</button>
+  </div>
+</form>

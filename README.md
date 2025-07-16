@@ -2,6 +2,8 @@
 
 A full-stack **Graph Editor** application that enables users to create, visualize, and manage graph structures through an interactive UI. Built with a robust modern stack and powered by `yFiles` for graph layout and visualization.
 
+⚠️ **Important**: This project uses [yFiles](https://www.yworks.com/products/yfiles), which is a **commercial library**. A **valid paid license** is required to run the application. Without a license, the graph-related functionalities will not be available or will be limited to trial/demo capabilities.
+
 ## 🚀 Tech Stack
 
 - **Backend**: [.NET Core Web API](https://dotnet.microsoft.com/)
